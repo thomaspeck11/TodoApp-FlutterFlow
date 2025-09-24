@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/todo.schema.json",
+  "title": "ToDo App Firestore Schema",
+  "type": "object",
+  "properties": {
+    "users": {
+      "type": "array",
+      "title": "Users Collection",
+      "items": {
+        "type": "object",
+        "title": "User Document",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Firestore document ID for the user"
+          },
+          "name": {
+            "type": "string",
+            "description": "User's display name"
+          },
+          "email": {
+            "type": "string",
+            "format": "email",
+            "description": "User's email address"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the user document was created"
+          }
+        },
+        "required": ["id", "name", "email"]
+      }
+    },
+    "tasks": {
+      "type": "array",
+      "title": "Tasks Collection",
+      "items": {
+        "type": "object",
+        "title": "Task Document",
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Firestore document ID for the task"
+          },
+          "title": {
+            "type": "string",
+            "description": "Short title of the task"
+          },
+          "details": {
+            "type": "string",
+            "description": "Extended description of the task"
+          },
+          "completed": {
+            "type": "boolean",
+            "description": "Whether the task is completed"
+          },
+          "created": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Timestamp when the task was created"
+          },
+          "user": {
+            "type": "string",
+            "pattern": "^/users/[A-Za-z0-9_-]+$",
+            "description": "Reference to a user document (e.g., /users/{userId})"
+          }
+        },
+        "required": ["id", "title", "completed", "created", "user"],
+        "examples": [
+          {
+            "id": "task123",
+            "title": "texting",
+            "details": "this is my task",
+            "completed": true,
+            "created": "2025-09-23T20:40:25-04:00",
+            "user": "/users/LMOhXZGqKxcV6gbnQvWFpyWGEun2"
+          }
+        ]
+      }
+    }
+  },
+  "required": ["users", "tasks"]
+}
