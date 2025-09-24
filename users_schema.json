@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.com/users.schema.json",
+  "title": "Users Collection Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "title": "User Document",
+    "properties": {
+      "uid": {
+        "type": "string",
+        "description": "Firestore document ID for the user"
+      },
+      "display_name": {
+        "type": "string",
+        "description": "User's display name"
+      },
+      "email": {
+        "type": "string",
+        "format": "email",
+        "description": "User's email address"
+      },
+      "photo_url": {
+        "type": "string",
+        "format": "uri",
+        "description": "Profile photo URL for the user"
+      },
+      "birthday": {
+        "type": "string",
+        "format": "date-time",
+        "description": "User's birthday (timestamp in ISO 8601)"
+      },
+      "created_time": {
+        "type": "string",
+        "format": "date-time",
+        "description": "Timestamp when the user was created"
+      },
+      "favcoolor": {
+        "type": "string",
+        "pattern": "^#[0-9A-Fa-f]{6}$",
+        "description": "Favorite color in hex format (if provided)"
+      }
+    },
+    "required": ["uid", "display_name", "email", "photo_url", "birthday", "created_time"],
+    "examples": [
+      {
+        "uid": "6BgTVdrB5jggobAiyIz49jlU8oH2",
+        "display_name": "Tom",
+        "email": "tpeck2003@gmail.com",
+        "photo_url": "https://firebasestorage.googleapis.com/v0/b/newto-l2ct0f.firebasestorage.app/o/users%2F6BgTVdrB5jggobAiyIz49jlU8oH2%2Fuploads%2F1758681312882000.jpg?alt=media&token=c8fed2ef-a68c-4683-965c-6ffbf9c0689b",
+        "birthday": "2025-09-18T00:00:00-04:00",
+        "created_time": "2025-09-23T22:35:07-04:00",
+        "favcoolor": "#ff00d1"
+      },
+      {
+        "uid": "LMOhXZGqKxcV6gbnQvWFpyWGEun2",
+        "display_name": "Thomas",
+        "email": "thomas@thomas.com",
+        "photo_url": "https://firebasestorage.googleapis.com/v0/b/newto-l2ct0f.firebasestorage.app/o/users%2FLMOhXZGqKxcV6gbnQvWFpyWGEun2%2Fuploads%2F1758671515459000.jpg?alt=media&token=1f0c76b2-f2fd-4b0d-9396-d7d33993f063",
+        "birthday": "2025-09-01T00:00:00-04:00",
+        "created_time": "2025-09-23T19:51:16-04:00"
+      }
+    ]
+  }
+}
