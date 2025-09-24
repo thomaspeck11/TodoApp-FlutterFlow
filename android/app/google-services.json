@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "937835391434",
+    "project_id": "newto-l2ct0f",
+    "storage_bucket": "newto-l2ct0f.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:937835391434:android:c1ae3706c14e4194914733",
+        "android_client_info": {
+          "package_name": "com.mycompany.newto"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDSdefiTsHDlCuOMliBhb_QfuEh7VsaJIU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
