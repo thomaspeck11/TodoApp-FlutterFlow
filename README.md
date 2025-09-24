@@ -6,4 +6,6 @@ A new Flutter project.
 
 FlutterFlow projects are built to run on the Flutter _stable_ release.
 
-i added flutterflow docs
+
+
+I updated the color of the thing
