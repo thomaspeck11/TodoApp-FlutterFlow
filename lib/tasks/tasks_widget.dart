@@ -196,6 +196,29 @@ class _TasksWidgetState extends State<TasksWidget> {
                     },
                   ),
                 ),
+                Align(
+                  alignment: AlignmentDirectional(0.0, 0.0),
+                  child: Text(
+                    'Listen to the secret sound, the real sound, which is inside you.” \n—Kabir',
+                    textAlign: TextAlign.center,
+                    style: FlutterFlowTheme.of(context).bodyMedium.override(
+                          font: GoogleFonts.inter(
+                            fontWeight: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontWeight,
+                            fontStyle: FlutterFlowTheme.of(context)
+                                .bodyMedium
+                                .fontStyle,
+                          ),
+                          letterSpacing: 0.0,
+                          fontWeight: FlutterFlowTheme.of(context)
+                              .bodyMedium
+                              .fontWeight,
+                          fontStyle:
+                              FlutterFlowTheme.of(context).bodyMedium.fontStyle,
+                        ),
+                  ),
+                ),
               ].divide(SizedBox(height: 12.0)),
             ),
           ),
